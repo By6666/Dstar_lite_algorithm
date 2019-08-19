@@ -284,6 +284,7 @@ bool DstarLite::AstarAlgorithm() {
     open_list_.pop_back();
 
     current_cell.Km = Km_;
+    current_cell.h_value = DistenceToGoal(current_cell.xoy);
     std::cout << std::endl
               << "current_cell****"
               << "(" << current_cell.xoy.first << "," << current_cell.xoy.second
